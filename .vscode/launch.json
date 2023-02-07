@@ -1,0 +1,52 @@
+{
+  "configurations": [
+    {
+      "type": "pwa-msedge",
+      "name": "Launch Web Microsoft Edge",
+      "request": "launch",
+      "userDataDir": false,
+      "runtimeArgs": ["--remote-debugging-port=9222"],
+      "url": "http://localhost:3000",
+      "presentation": {
+        "hidden": true
+      }
+    },
+    {
+      "type": "pwa-msedge",
+      "name": "Launch Web Microsoft Edge in headless mode",
+      "request": "launch",
+      "userDataDir": false,
+      "runtimeArgs": ["--headless", "--remote-debugging-port=9222"],
+      "url": "http://localhost:3000",
+      "presentation": {
+        "hidden": true
+      }
+    },
+    {
+      "type": "vscode-edge-devtools.debug",
+      "name": "Open Web Edge DevTools",
+      "request": "attach",
+      "url": "http://localhost:3000",
+      "presentation": {
+        "hidden": true
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Launch Web",
+      "configurations": ["Launch Web Microsoft Edge"]
+    },
+    {
+      "name": "Launch Web and attach DevTools",
+      "configurations": ["Launch Web Microsoft Edge", "Open Web Edge DevTools"]
+    },
+    {
+      "name": "Launch Web Headless and attach DevTools",
+      "configurations": [
+        "Launch Web Microsoft Edge in headless mode",
+        "Open Web Edge DevTools"
+      ]
+    }
+  ]
+}
