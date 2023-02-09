@@ -2,6 +2,7 @@
   "name": "redesign",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "nx": "nx",
     "start": "nx serve",
@@ -27,6 +28,7 @@
   },
   "dependencies": {
     "@effect/data": "^0.1.0",
+    "@effect/stream": "^0.3.0",
     "@effect/cache": "^0.1.2",
     "@effect/query": "^0.1.3",
     "@effect/match": "^0.0.9",

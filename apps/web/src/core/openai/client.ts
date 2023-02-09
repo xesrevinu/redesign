@@ -1,9 +1,9 @@
+import * as Context from '@effect/data/Context';
 import * as Config from '@effect/io/Config';
 import * as ConfigProvider from '@effect/io/Config/Provider';
 import * as T from '@effect/io/Effect';
 import * as L from '@effect/io/Layer';
 import { pipe } from '@fp-ts/core/Function';
-import * as Context from '@fp-ts/data/Context';
 import * as SchemaParser from '@fp-ts/schema/Parser';
 
 import * as Fetch from '@/core/fetch';

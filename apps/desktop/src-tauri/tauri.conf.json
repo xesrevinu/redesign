@@ -1,6 +1,6 @@
 {
   "build": {
-    "beforeDevCommand": "cd ../.. && npx nx run desktop:serve",
+    "beforeDevCommand": "cd ../.. && npx nx run desktop:dev",
     "beforeBuildCommand": "cd ../.. && npx nx run desktop:build",
     "devPath": "http://localhost:1420",
     "distDir": "../../../dist/apps/desktop"
