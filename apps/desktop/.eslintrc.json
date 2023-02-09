@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "plugin:@nrwl/nx/react",
+    "plugin:@nrwl/nx/react-typescript",
+    "../../.eslintrc.json"
+  ],
+  "ignorePatterns": ["!**/*", ".next/**/*", "src/core/colors/**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {}
+    }
+  ],
+  "rules": {},
+  "env": {}
+}

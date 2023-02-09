@@ -1,0 +1,94 @@
+{
+  "name": "desktop",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/desktop/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "configFile": "vite.config.ts",
+        "outputPath": "dist/apps/desktop"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "desktop:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "desktop:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "desktop:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "tauri": {
+      "executor": "nx:run-commands",
+      "defaultConfiguration": "development",
+      "configurations": {
+        "development": {
+          "commands": [
+            {
+              "command": "npx tauri dev -c apps/desktop/src-tauri/tauri.conf.json"
+            }
+          ]
+        },
+        "build": {
+          "outputs": ["{options.outputPath}"],
+          "commands": [
+            {
+              "command": "npx tauri build -c apps/desktop/src-tauri/tauri.conf.json"
+            }
+          ]
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nrwl/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "desktop:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "desktop:build:development"
+        },
+        "production": {
+          "buildTarget": "desktop:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/desktop/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/apps/desktop"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/apps/desktop"
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,8 +1,10 @@
 {
-  "vitest.enable": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "npm.packageManager": "pnpm",
+  "eslint.packageManager": "pnpm",
   "typescript.tsdk": "node_modules/typescript/lib",
-  "cSpell.words": ["openai"]
+  "vscode-edge-devtools.webhint": false,
+  "rust-analyzer.linkedProjects": ["apps/desktop/src-tauri/Cargo.toml"],
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  }
 }
