@@ -1,8 +1,32 @@
 {
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "explorer.sortOrder": "mixed",
   "npm.packageManager": "pnpm",
   "eslint.packageManager": "pnpm",
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.format.enable": true,
   "vscode-edge-devtools.webhint": false,
+  "tailwindCSS.experimental.configFile": "apps/web/tailwind.config.js",
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript",
+    "typescriptreact": "javascript"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "rust-analyzer.linkedProjects": ["apps/desktop/src-tauri/Cargo.toml"],
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"

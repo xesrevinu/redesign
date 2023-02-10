@@ -19,7 +19,9 @@
     "baseUrl": ".",
     "paths": {
       "@redesign/core": ["packages/core/src"],
-      "@redesign/core/*": ["packages/core/src/*"]
+      "@redesign/core/*": ["packages/core/src/*"],
+      "@redesign/openai": ["packages/openai/src"],
+      "@redesign/openai/*": ["packages/openai/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

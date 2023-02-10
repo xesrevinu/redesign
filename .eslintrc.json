@@ -1,7 +1,12 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx", "sort-destructure-keys", "simple-import-sort"],
+  "plugins": [
+    "@nrwl/nx",
+    "sort-destructure-keys",
+    "simple-import-sort",
+    "import"
+  ],
   "extends": ["plugin:prettier/recommended"],
   "overrides": [
     {

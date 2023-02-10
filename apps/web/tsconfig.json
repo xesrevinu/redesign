@@ -9,13 +9,16 @@
     "incremental": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "moduleResolution": "bundler",
     "types": ["node"],
     "lib": ["ES2020", "DOM"],
     "paths": {
       "@/*": ["apps/web/src/*"],
 
       "@redesign/core": ["packages/core/src"],
-      "@redesign/core/*": ["packages/core/src/*"]
+      "@redesign/core/*": ["packages/core/src/*"],
+      "@redesign/openai": ["packages/openai/src"],
+      "@redesign/openai/*": ["packages/openai/src/*"]
     }
   },
   "files": [],
