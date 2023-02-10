@@ -1,10 +1,6 @@
 {
-  "extends": [
-    "plugin:@nrwl/nx/react",
-    "plugin:@nrwl/nx/react-typescript",
-    "../../.eslintrc.json"
-  ],
-  "ignorePatterns": ["!**/*", ".next/**/*", "src/core/colors/**/*"],
+  "extends": ["plugin:@nrwl/nx/react-typescript", "../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*", "src-tauri/**/*"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
